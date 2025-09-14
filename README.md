@@ -10,7 +10,8 @@ This small Electron app emulates the Auth0 login flow used by a React Native app
 - Cross-platform packaging (macOS DMG, Windows Portable) via `electron-builder`  
 
 ## Screenshots
-No screenshots included. The UI is intentionally simple: buttons for Login, Logout, Copy token, a status label, and a debug log area.
+The UI is intentionally simple: buttons for Login, Logout, Copy token, a status label, and a debug log area.
+![Screenshot](screenshot.png) 
 
 ## Requirements
 - Node.js 18+
