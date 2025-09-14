@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; base-uri 'self'; connect-src *;">
+  <title>Auth0 Electron Demo</title>
+  <style>
+    /* Reset & base */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f5f7fa;
+      color: #222;
+      padding: 24px;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      color: #111;
+    }
+    p {
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+      color: #555;
+    }
+
+    /* Button */
+    button {
+      background-color: #4f46e5;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background-color: #4338ca;
+    }
+
+    /* Status text */
+    #status {
+      margin: 16px 0;
+      font-weight: 500;
+    }
+    .error {
+      color: #e53e3e;
+    }
+
+    /* Output & log */
+    .output-container {
+      position: relative;
+      margin-bottom: 24px;
+    }
+    pre {
+      background: #1e1e2f;
+      color: #d4f0d4;
+      padding: 16px;
+      border-radius: 8px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      max-height: 300px;
+      overflow-y: auto;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.9rem;
+    }
+
+    /* Copy button */
+    .copy-btn {
+      background: #10b981;
+      color: #fff;
+      border: none;
+    }
+    .copy-btn:hover {
+      background: #059669;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+<h1>Auth0 Demo</h1>
+<p>This project allows you to quickly get a Bearer token for testing API requests without using the full React Native app</p>
+
+<button id="login">Login with Auth0</button>
+<button id="logout" style="margin-left:8px;background:#ef4444;">Logout</button>
+<button class="copy-btn" id="copyOutput" style="margin-left:8px;">Copy token</button>
+<div id="status"></div>
+
+<div class="output-container">
+  <pre id="output"></pre>
+</div>
+
+<h3>Debug log</h3>
+<pre id="log"></pre>
+
+<script src="renderer.js"></script>
+</body>
+</html>
